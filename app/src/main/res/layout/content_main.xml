@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL_replace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/id_recycleview_productList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/LL_product_list"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="1dp"
+                android:background="#000000"></View>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="1dp"
+                android:background="#000000"></View>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="1dp"
+                android:background="#000000"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/card_icon" />
+
+            <LinearLayout
+                android:id="@+id/LL_cart_open_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewItemCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : items"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewInyourCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="in your cart"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total : "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTotalAllPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#33CC33"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/BTN_checkout"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/rounded_button"
+                    android:padding="5dp"
+                    android:text="CHECK OUT"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBanar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/img1"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
